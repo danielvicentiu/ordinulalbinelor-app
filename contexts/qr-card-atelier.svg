@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1748" viewBox="0 0 1240 1748">
+  <defs>
+    <linearGradient id="parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf6ea"/>
+      <stop offset="100%" stop-color="#f0e3c0"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e6c14a"/>
+      <stop offset="50%" stop-color="#c9a227"/>
+      <stop offset="100%" stop-color="#9a7a14"/>
+    </linearGradient>
+    <pattern id="honeycomb" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+      <polygon points="30,2 56,17 56,47 30,62 4,47 4,17" 
+        fill="none" stroke="#c9a227" stroke-width="0.8" opacity="0.12"/>
+    </pattern>
+  </defs>
+  
+  <!-- Fundal pergament + pattern fagure -->
+  <rect width="1240" height="1748" fill="url(#parch)"/>
+  <rect width="1240" height="1748" fill="url(#honeycomb)"/>
+  
+  <!-- Border ornamental dublu -->
+  <rect x="40" y="40" width="1160" height="1668" 
+    fill="none" stroke="url(#gold)" stroke-width="6"/>
+  <rect x="60" y="60" width="1120" height="1628" 
+    fill="none" stroke="url(#gold)" stroke-width="2"/>
+  
+  <!-- Sigiliu hexagonal sus cu albină -->
+  <g transform="translate(620, 220)">
+    <polygon points="0,-130 113,-65 113,65 0,130 -113,65 -113,-65" 
+      fill="url(#gold)" stroke="#7a5e10" stroke-width="3"/>
+    <polygon points="0,-100 87,-50 87,50 0,100 -87,50 -87,-50" 
+      fill="#faf6ea" stroke="#c9a227" stroke-width="2"/>
+    <!-- Albină stilizată în centru -->
+    <ellipse cx="0" cy="0" rx="35" ry="22" fill="#2d1b0e"/>
+    <ellipse cx="0" cy="0" rx="35" ry="22" fill="none" stroke="#c9a227" stroke-width="3"/>
+    <line x1="-25" y1="-8" x2="25" y2="-8" stroke="#c9a227" stroke-width="2.5"/>
+    <line x1="-25" y1="0" x2="25" y2="0" stroke="#c9a227" stroke-width="2.5"/>
+    <line x1="-25" y1="8" x2="25" y2="8" stroke="#c9a227" stroke-width="2.5"/>
+    <!-- Aripi transparente -->
+    <ellipse cx="-15" cy="-25" rx="22" ry="14" fill="#faf6ea" opacity="0.7" stroke="#c9a227" stroke-width="1.5"/>
+    <ellipse cx="15" cy="-25" rx="22" ry="14" fill="#faf6ea" opacity="0.7" stroke="#c9a227" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Titlu "ORDINUL ALBINELOR" -->
+  <text x="620" y="430" text-anchor="middle" 
+    font-family="Cardo, Junicode, Georgia, serif" font-size="78" font-weight="bold" 
+    fill="#7a5e10" letter-spacing="4">
+    ORDINUL
+  </text>
+  <text x="620" y="510" text-anchor="middle" 
+    font-family="Cardo, Junicode, Georgia, serif" font-size="78" font-weight="bold" 
+    fill="#7a5e10" letter-spacing="4">
+    ALBINELOR
+  </text>
+  
+  <!-- Linie ornamentală cu punct central -->
+  <line x1="320" y1="555" x2="920" y2="555" stroke="url(#gold)" stroke-width="2"/>
+  <circle cx="620" cy="555" r="8" fill="url(#gold)"/>
+  
+  <!-- Subtitlu -->
+  <text x="620" y="615" text-anchor="middle" 
+    font-family="Cardo, Georgia, serif" font-size="36" font-style="italic" 
+    fill="#5a4220">
+    Povești pentru copii din Cetatea de Ceară
+  </text>
+  
+  <!-- Invitație scanare -->
+  <text x="620" y="730" text-anchor="middle" 
+    font-family="Cardo, Georgia, serif" font-size="32" 
+    fill="#2d1b0e">
+    Scanează sigiliul pentru a primi
+  </text>
+  <text x="620" y="775" text-anchor="middle" 
+    font-family="Cardo, Georgia, serif" font-size="32" 
+    fill="#2d1b0e">
+    scrisorile Starostelui Daniel
+  </text>
+  
+  <!-- Cadru pentru QR -->
+  <rect x="370" y="850" width="500" height="500" 
+    fill="#ffffff" stroke="url(#gold)" stroke-width="6"/>
+  <rect x="385" y="865" width="470" height="470" 
+    fill="#ffffff" stroke="#c9a227" stroke-width="1.5"/>
+  
+  <!-- PLACEHOLDER QR — ÎNLOCUIEȘTE cu QR generat -->
+  <text x="620" y="1075" text-anchor="middle" 
+    font-family="monospace" font-size="32" fill="#999">
+    [INSEREAZĂ QR AICI]
+  </text>
+  <text x="620" y="1115" text-anchor="middle" 
+    font-family="monospace" font-size="22" fill="#bbb">
+    URL:
+  </text>
+  <text x="620" y="1150" text-anchor="middle" 
+    font-family="monospace" font-size="20" fill="#bbb">
+    https://ordinulalbinelor.ro/?utm_source=qr
+  </text>
+  <text x="620" y="1180" text-anchor="middle" 
+    font-family="monospace" font-size="20" fill="#bbb">
+    &amp;utm_medium=card
+  </text>
+  <text x="620" y="1210" text-anchor="middle" 
+    font-family="monospace" font-size="20" fill="#bbb">
+    &amp;utm_campaign=atelier-clasa-pregatitoare
+  </text>
+  
+  <!-- Hexagoane decorative pe colțurile cadrului QR -->
+  <polygon points="370,850 385,858 385,872 370,880 355,872 355,858" fill="url(#gold)"/>
+  <polygon points="870,850 885,858 885,872 870,880 855,872 855,858" fill="url(#gold)"/>
+  <polygon points="370,1350 385,1358 385,1372 370,1380 355,1372 355,1358" fill="url(#gold)"/>
+  <polygon points="870,1350 885,1358 885,1372 870,1380 855,1372 855,1358" fill="url(#gold)"/>
+  
+  <!-- URL clear sub QR -->
+  <text x="620" y="1400" text-anchor="middle" 
+    font-family="Cardo, Georgia, serif" font-size="28" font-weight="bold" 
+    fill="#7a5e10">
+    ordinulalbinelor.ro
+  </text>
+  
+  <!-- Mesaj jos -->
+  <text x="620" y="1490" text-anchor="middle" 
+    font-family="Cardo, Georgia, serif" font-size="30" font-style="italic" 
+    fill="#5a4220">
+    O scrisoare la două săptămâni.
+  </text>
+  <text x="620" y="1535" text-anchor="middle" 
+    font-family="Cardo, Georgia, serif" font-size="30" font-style="italic" 
+    fill="#5a4220">
+    O poveste pentru copilul tău.
+  </text>
+  
+  <!-- Semnătură finală -->
+  <text x="620" y="1620" text-anchor="middle" 
+    font-family="Cardo, Georgia, serif" font-size="26" 
+    fill="#7a5e10">
+    — Starostele Daniel
+  </text>
+  <text x="620" y="1660" text-anchor="middle" 
+    font-family="Cardo, Georgia, serif" font-size="20" font-style="italic" 
+    fill="#9a7a14">
+    Păstrătorul Cetății de Ceară
+  </text>
+</svg>
