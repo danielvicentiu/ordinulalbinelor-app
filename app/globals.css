@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold: #c9a227;
+    --gold-light: #e6c14a;
+    --gold-dark: #9a7a14;
+    --amber: #d4830c;
+    --ivory: #faf6ea;
+    --parchment: #f5e9c8;
+    --ink: #2d1b0e;
+    --ink-soft: #5a4220;
+
+    --background: 45 60% 96%;
+    --foreground: 25 60% 12%;
+    --card: 43 55% 90%;
+    --card-foreground: 25 60% 12%;
+    --popover: 45 60% 96%;
+    --popover-foreground: 25 60% 12%;
+    --primary: 42 72% 47%;
+    --primary-foreground: 43 55% 90%;
+    --secondary: 42 45% 85%;
+    --secondary-foreground: 25 60% 12%;
+    --muted: 42 30% 88%;
+    --muted-foreground: 25 35% 35%;
+    --accent: 38 85% 45%;
+    --accent-foreground: 43 55% 90%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 42 40% 78%;
+    --input: 42 40% 78%;
+    --ring: 42 72% 47%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-ink font-inter;
+    background-image:
+      radial-gradient(ellipse at 20% 20%, rgba(201, 162, 39, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(212, 131, 12, 0.04) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3 {
+    @apply font-cardo;
+  }
+
+  ::selection {
+    background-color: rgba(201, 162, 39, 0.25);
+    color: #2d1b0e;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .ceremonial {
+    @apply font-cardo;
+  }
+
+  .drop-cap::first-letter {
+    @apply font-cardo text-gold float-left text-6xl leading-none mr-2 mt-1;
+    font-size: 4.5rem;
+    line-height: 0.8;
+    margin-right: 0.1em;
+    margin-top: 0.05em;
+  }
+
+  .parchment-card {
+    background-color: var(--parchment);
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    border-radius: 0.5rem;
+  }
+
+  .gold-border {
+    border: 2px solid var(--gold);
+  }
+
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .text-ink-soft {
+    color: var(--ink-soft);
+  }
+
+  .bg-ivory {
+    background-color: var(--ivory);
+  }
+
+  .bg-parchment {
+    background-color: var(--parchment);
+  }
+
+  .hexagon-clip {
+    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+  }
+}
