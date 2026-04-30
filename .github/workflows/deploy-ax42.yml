@@ -1,0 +1,31 @@
+name: Deploy to AX42
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.AX42_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.AX42_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Trigger redeploy on AX42
+        run: |
+          ssh -i ~/.ssh/deploy_key \
+              -o StrictHostKeyChecking=yes \
+              ${{ secrets.AX42_USER }}@${{ secrets.AX42_HOST }} \
+              "true"
+        # NOTE: comanda "true" e ignorată — restricția command="bash /home/danielv/scripts/ordinul/redeploy.sh"
+        # din authorized_keys forțează execuția DOAR a scriptului. Best practice security.
+
+      - name: Cleanup SSH key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
